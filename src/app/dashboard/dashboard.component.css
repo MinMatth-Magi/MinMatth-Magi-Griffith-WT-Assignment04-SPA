@@ -1,0 +1,30 @@
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  height: 75vh;
+}
+
+.card {
+  flex: 0 0 auto;
+  border: 1px solid #3498db;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 1em;
+  width: 60vh;
+  text-align: center;
+}
+
+.task-add {
+  border: 1px solid #3498db;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 1em 0.2em;
+  width: 10em;
+}
+
+.task-list-container {
+  max-height: 45vh;
+  overflow: auto;
+  text-align: justify;
+}

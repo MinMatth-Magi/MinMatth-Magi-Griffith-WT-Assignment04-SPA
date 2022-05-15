@@ -13,6 +13,7 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TaskComponent } from './dashboard/task/task.component';
 import { AuthService } from './auth/auth.service';
 import { BackendNetworkService } from './backend-network.service';
 
@@ -27,7 +28,12 @@ import { BackendNetworkService } from './backend-network.service';
     BrowserModule,
     FormsModule,
   ],
-  declarations: [AppComponent, AuthComponent, DashboardComponent],
+  declarations: [
+    AppComponent,
+    AuthComponent,
+    DashboardComponent,
+    TaskComponent,
+  ],
   providers: [BackendNetworkService, AuthService],
   bootstrap: [AppComponent],
 })
