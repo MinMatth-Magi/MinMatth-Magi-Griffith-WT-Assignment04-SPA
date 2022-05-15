@@ -1,4 +1,5 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div>
+  <app-auth class="app-auth"></app-auth>
+  <button (click)="sayHelloToBackend()">Say hello to backend</button>
+  {{ message }}
+</div>

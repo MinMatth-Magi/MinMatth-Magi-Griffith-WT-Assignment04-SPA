@@ -1,0 +1,56 @@
+<div>
+  <button class="auth-button" (click)="toggleAuthentication()">
+    <img
+      class="auth-button-icon"
+      src="https://cdn-icons-png.flaticon.com/512/3237/3237472.png"
+      width="50"
+    />
+    <span class="auth-button-label">
+      {{ user != null ? user.email : 'Not Connected' }}
+    </span>
+  </button>
+
+  <div *ngIf="!authenticationFormHidden" class="auth-form">
+    <div *ngIf="user == null">
+      <form [formGroup]="registerForm">
+        <div class="form-group">
+          <label>Email address</label>
+          <input
+            type="email"
+            formControlName="email"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          (click)="tryRegister(registerForm.value)"
+          class="btn btn-default"
+        >
+          Register
+        </button>
+        <button
+          type="submit"
+          (click)="tryLoggingIn(registerForm.value)"
+          class="btn btn-default"
+        >
+          Sign In
+        </button>
+      </form>
+      <span class="error">{{ errorMessage }}</span>
+      <span class="success">{{ successMessage }}</span>
+    </div>
+    <div *ngIf="user != null">
+      <button (click)="logOut()">Log Out</button>
+    </div>
+  </div>
+</div>

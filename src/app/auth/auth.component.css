@@ -1,0 +1,19 @@
+.auth-button {
+  margin: 1em 1em 0em 1em;
+  padding: 10px;
+  border: 1px solid #3498db;
+  border-radius: 1em;
+  background-color: transparent;
+}
+.auth-button-icon {
+  vertical-align: middle;
+}
+.auth-button-label {
+  vertical-align: middle;
+  font-size: large;
+  margin-left: 0.5em;
+}
+
+.auth-form {
+  margin: 1em;
+}
