@@ -18,8 +18,7 @@ export class AuthService {
         .createUserWithEmailAndPassword(value.email, value.password)
         .then(
           (res) => {
-            //this.userControl.next(res.user);
-            console.log(res.user);
+            this.userControl.next(res.user);
             resolve(res);
           },
           (err) => reject(err)

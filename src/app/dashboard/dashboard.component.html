@@ -2,11 +2,13 @@
   <div class="scrolling-wrapper">
     <div class="card" *ngFor="let list of lists">
       <div style="display: flex; flex-direction: row; align-items: center;">
-        <h1 style="margin-right:auto;">{{ list.listname }}</h1>
+        <h1 style="margin-right:auto;" contentEditable="true">
+          {{ list.listname }}
+        </h1>
         <img
-        (click)="editTaskListName(list.id, 'Hello')"
-        style="margin-right:0.5em;"
-          src="https://cdn-icons-png.flaticon.com/512/1057/1057097.png"
+          (click)="editTaskListName(list.id, 'Hello')"
+          style="margin-right:0.5em;"
+          src="https://cdn-icons.flaticon.com/png/512/3984/premium/3984400.png?token=exp=1652643638~hmac=d893e91aa5bdaffbad318b8d88f37120"
           height="30"
         />
         <img
@@ -23,7 +25,7 @@
           <app-task [task]="task"></app-task>
         </div>
 
-        <button class="task-add">
+        <button class="task-add" (click)="addNewTaskToList(list.id)">
           <img
             src="https://cdn-icons.flaticon.com/png/512/4210/premium/4210903.png?token=exp=1652581478~hmac=1eb81e896b2d93fbbdd90c429bf8f7de"
             width="50"

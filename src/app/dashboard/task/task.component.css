@@ -1,6 +1,9 @@
 .task-container {
   border-radius: 1em;
-  background-color: #3498db;
+  background-color: rgba(52, 152, 219, 0.35);
   margin: 1em 0.1em;
-  padding: 0.1em 0.2em;
+  padding: 0.1em 1em;
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
 }

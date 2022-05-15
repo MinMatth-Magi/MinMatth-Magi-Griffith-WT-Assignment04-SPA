@@ -1,3 +1,9 @@
 <div class="task-container">
-  <h2>{{ task.name }}</h2>
+  <h2 contentEditable="true">{{ task.name }}</h2>
+  <img
+    (click)="deleteSelf()"
+    src="https://cdn-icons.flaticon.com/png/512/2763/premium/2763138.png?token=exp=1652654276~hmac=db61c16e291ca2e8c19730a4e0472d0f"
+    height="30"
+    style="margin-left:auto;margin-top:1em"
+  />
 </div>

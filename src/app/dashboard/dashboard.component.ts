@@ -17,47 +17,47 @@ export class DashboardComponent implements OnInit {
   };
   lists = [
     {
-      id: '1',
+      id: 1,
       listname: 'Backlog',
       tasks: [
         {
-          id: '1',
+          id: 1,
           name: 'Epitech Innovative Project',
           assignedMembers: [2, 3],
         },
         {
-          id: '2',
+          id: 2,
           name: 'Griffith-CSP',
         },
         {
-          id: '3',
+          id: 3,
           name: 'Griffith-HGP',
-        },
-        {
-          id: '4',
-          name: 'Griffith-CD',
-        },
-        {
-          id: '5',
-          name: 'Griffith-GD',
         },
       ],
     },
     {
-      id: '2',
+      id: 2,
       listname: 'To Do',
       tasks: [],
     },
     {
-      id: '3',
+      id: 3,
       listname: 'In progress',
       tasks: [],
     },
   ];
 
+  private newId = () => {
+    let min = 0;
+    let max = 100000;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
   addNewTaskList = () => {
     this.lists.push({
-      id: '5',
+      id: this.newId(),
       listname: 'New list',
       tasks: [],
     });
@@ -68,6 +68,15 @@ export class DashboardComponent implements OnInit {
   };
 
   editTaskListName = (id, value) => {
-    this.lists.find((taskList) => taskList.id === id).listname = value;
+    // Todo: save new name to database
+  };
+
+  addNewTaskToList = (listId) => {
+    this.lists
+      .filter((taskList) => taskList.id === listId)[0]
+      .tasks.push({
+        id: this.newId(),
+        name: 'New task',
+      });
   };
 }

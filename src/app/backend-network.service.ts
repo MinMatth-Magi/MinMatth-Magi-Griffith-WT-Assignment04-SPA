@@ -7,7 +7,7 @@ export class BackendNetworkService {
 
   baseUrl = 'https://localhost:8080/';
 
-  sayHello = () => {
-    return this.http.get(this.baseUrl + 'hello');
+  pingBackend = () => {
+    return this.http.get(this.baseUrl + 'ping');
   };
 }

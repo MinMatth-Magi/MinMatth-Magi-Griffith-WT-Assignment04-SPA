@@ -11,4 +11,8 @@ export class TaskComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  deleteSelf() {
+    // Todo: Request parent component to destroy self
+  }
 }

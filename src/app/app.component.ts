@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
 import { BackendNetworkService } from './backend-network.service';
 
 @Component({
@@ -8,12 +8,9 @@ import { BackendNetworkService } from './backend-network.service';
 })
 export class AppComponent {
   constructor(private backendNetworkService: BackendNetworkService) {}
-  name = 'Angular ' + VERSION.major;
-  message = '';
 
-  sayHelloToBackend = () => {
-    let res = this.backendNetworkService.sayHello();
+  pingBackend = () => {
+    let res = this.backendNetworkService.pingBackend();
     console.log(res);
-    this.message = 'Backend says hello too';
   };
 }
